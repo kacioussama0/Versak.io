@@ -333,10 +333,12 @@ section.trial {
 section.trial div.container {
     display: flex;
     align-items: center;
+    
     justify-content: space-around;
 }
 section.trial div.container p {
     font-size: 25px;
+    text-align: center;
     margin: 0;
 }
 section.trial div.container button {
