@@ -313,6 +313,7 @@ section.trial {
     color: #fff;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: space-evenly;
 }
 
