@@ -52,6 +52,9 @@ header nav ul li:last-child a:hover {
     color: #fff;
 }
 
+header nav ul li:hover:not(li:last-child):before {
+    left: 0;
+}
 @media (max-width: 767px) {
     header {
         height: fit-content;
@@ -68,7 +71,9 @@ header nav ul li:last-child a:hover {
     }
     header nav ul li {
         margin-bottom: 15px;
+        position: relative;
     }
+
     header nav ul li a{
         
         margin-left: 0;
@@ -263,6 +268,9 @@ div.works div img{
         width: 100%;
         text-align: center;
     }
+    div.works div.box-one h4, div.works div.box-four h4 {
+       line-height: 2;
+    }
 }
 
 
@@ -292,11 +300,17 @@ section.products div.container div.products {
 section.products div.container div.products div {
     height: 400px;
     background-color: #eee;
+    transition: 0.6s;
+    
 }
-
+section.products div.container div.products div:hover img{
+    filter: grayscale(1);
+    transform: rotate(1deg);
+}
 section.products div.container div.products div img {
     width: 100%;
     height: 100%;
+    transition: 0.6s;
     object-fit: cover;
 }
 /* End Products */
@@ -313,7 +327,6 @@ section.trial {
     color: #fff;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: space-evenly;
 }
 
@@ -475,6 +488,21 @@ section.contact-us div.container div.right div.form input[type=submit]{
     }
 
 }
+@media (min-width: 768px) and (max-width: 991px) {
+    section.contact-us {
+        padding: 0;
+    }
+    section.contact-us div.container {
+        flex-direction: column;
+        
+    }
+    section.contact-us div.container div.left {
+        width: 100%;
+    }
+    section.contact-us div.container div.right {
+        width: 100%;
+    }
+}
 /* End Contact Us */
 
 
@@ -574,6 +602,7 @@ footer div.container ul li a:hover {
     }
     footer div.container ul {
         flex-direction: column;
+        align-items: center;
         
     }
     footer div.container ul li {
